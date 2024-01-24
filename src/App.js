@@ -1,4 +1,4 @@
-import './categories.styles.scss';
+import CategoriesItem from "./component/categories-item/categories-item.component";
 
 const App = () => {
 
@@ -29,20 +29,9 @@ const App = () => {
       "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
     }
   ]
-  
 
   return (
-  <div className="categories-container">
-    {categories.map((item) => (
-        <div className="category-container" key={item.id}>
-          <div className='background-image' style={{backgroundImage: `url(${item.imageUrl})`}}/>
-          <div className="category-container-body">
-            <h1>{item.title}</h1>
-            <p>Shop Now</p>
-          </div>
-        </div>
-    ))}
-  </div>
+    <CategoriesItem categories={categories}/>
   );
 };
 
